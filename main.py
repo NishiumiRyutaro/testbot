@@ -14,7 +14,7 @@ async def on_ready():
 async def on_message(message):
     if message.author.bot:
         return
-    if message.content == '/hello':
-        await message.channel.send('はろー')
+    if message.content == 'つよばは':
+        await message.channel.send('22時からです')
 
 client.run(token)
