@@ -16,5 +16,11 @@ async def on_message(message):
         return
     if message.content == '/hello':
         await message.channel.send('はろー')
+@client.event
+async def on_message(message):
+    if message.author.bot:
+        return
+    if message.content == '/evening':
+        await message.channel.send('こんばんは')
 
 client.run(token)
