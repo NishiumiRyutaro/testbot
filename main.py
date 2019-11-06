@@ -18,5 +18,5 @@ async def on_message(message):
         await message.channel.send('はろー')
     elif message.content == '/evening':
         await message.channel.send('こんばんは')
-    await delete_messege()
+    await message.delete()
 client.run(token)
