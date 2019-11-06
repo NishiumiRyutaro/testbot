@@ -1,7 +1,6 @@
 import os
 
 import discord
-import re
 
 token = os.getenv('DISCORD_TOKEN')
 
@@ -20,4 +19,4 @@ async def on_message(message):
     elif message.content == '/evening':
         await message.channel.send('こんばんは')
 
-client.run("token")
+client.run(token)
