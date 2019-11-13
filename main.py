@@ -1,4 +1,5 @@
-#coding:UTF-8
+import os
+
 import discord
 from datetime import datetime
 from discord.ext import tasks
@@ -12,7 +13,7 @@ client = discord.Client()
 DefensedateTimeList = [
 '2019/11/13 19:00:00',
 '2019/11/13 18:30:00',
-'2019/11/13 12:44:00',
+'2019/11/13 12:46:00',
 '2019/05/22 07:00:00',
 '2019/05/23 07:00:00',
 '2019/05/24 07:00:00',
