@@ -11,13 +11,13 @@ client = discord.Client()
 
 #投稿する日時
 DefensedateTimeList = [
-'2019/11/13 19:00:00',
-'2019/11/13 18:30:00',
-'2019/11/13 12:55:00',
-'2019/05/22 07:00:00',
-'2019/05/23 07:00:00',
-'2019/05/24 07:00:00',
-'2019/05/25 07:00:00'
+'2019/11/13 19:00',
+'2019/11/13 18:30',
+'2019/11/13 12:59',
+'2019/05/22 07:00',
+'2019/05/23 07:00',
+'2019/05/24 07:00',
+'2019/05/25 07:00'
 ]
 
 AttackdateTimeList = [
@@ -39,7 +39,7 @@ async def DSendMessage():
 async def time_check():
     sleepTime = 0
     # 現在の時刻
-    now = datetime.now().strftime('%Y/%m/%d %H:%M:%S')
+    now = datetime.now().strftime('%Y/%m/%d %H:%M')
     if now in DefensedateTimeList:
         print(now)
         await DSendMessage()
