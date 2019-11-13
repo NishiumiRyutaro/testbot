@@ -30,8 +30,7 @@ AttackdateTimeList = [
 @client.event
 async def on_ready():
     print('ready')
-    await message.channel.send(now)
-
+    
 async def DSendMessage():
     channel = client.get_channel(channel_id)
     await channel.send('攻撃アビの時間だよ')
@@ -45,8 +44,6 @@ async def time_check():
     now = datetime.now().strftime('%Y/%m/%d %H:%M')
     if now in DefensedateTimeList:
         await DSendMessage()
-#該当時間だった場合は２重に投稿しないよう３０秒余計に待機
-    #await asyncio.sleep(30)
 
 # メッセージ受信時に動作する処理
 @client.event
