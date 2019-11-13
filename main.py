@@ -39,11 +39,11 @@ async def DSendMessage():
 # 30秒に一回ループ
 @tasks.loop(seconds=0)
 async def time_check():
+    await message.channel.send(now)
     sleepTime = 0
     # 現在の時刻
     now = datetime.now().strftime('%Y/%m/%d %H:%M')
     if now in DefensedateTimeList:
-        await message.channel.send(now)
         await DSendMessage()
 #該当時間だった場合は２重に投稿しないよう３０秒余計に待機
     #await asyncio.sleep(30)
