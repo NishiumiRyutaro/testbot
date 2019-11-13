@@ -43,7 +43,7 @@ async def time_check():
     # 現在の時刻
     now = datetime.now().strftime('%Y/%m/%d %H:%M')
     if now in DefensedateTimeList:
-        print(now)
+        await message.channel.send(now)
         await DSendMessage()
 #該当時間だった場合は２重に投稿しないよう３０秒余計に待機
     #await asyncio.sleep(30)
