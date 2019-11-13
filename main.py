@@ -19,17 +19,17 @@ DefensedateTimeList = [
 '09:53',
 '09:54',
 '09:55',
-'15:10'
+'15:14'
 ]
 FOdateTimeList = [
-'15:10',
+'15:14',
 '07:00'
 ]
 ProtCommndList = [
     "20時30分からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
     "21時からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
     "21時30分からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
-    "22時からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。"
+    "22時からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
     "22時30分からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。"
 ]
 # 起動時に動作する処理
@@ -68,11 +68,11 @@ async def on_message(message):
         await message.channel.send(now)
     if message.content != None:
         x = message.content
-        m = re.search(r'!つよばは21時', x, flags=re.DOTALL)
-        l = re.search(r'!つよばは22時', x, flags=re.DOTALL)
-        o = re.search(r'!つよばは21時', x, flags=re.DOTALL)
+        m = re.search(r'!つよばは20時30分', x, flags=re.DOTALL)
+        l = re.search(r'!つよばは21時', x, flags=re.DOTALL)
+        o = re.search(r'!つよばは21時30分', x, flags=re.DOTALL)
         p = re.search(r'!つよばは22時', x, flags=re.DOTALL)
-        q = re.search(r'!つよばは21時', x, flags=re.DOTALL)
+        q = re.search(r'!つよばは22時30分', x, flags=re.DOTALL)
         if m :
             await message.channel.send(ProtCommndList[0])
         if l :
