@@ -3,7 +3,7 @@ import discord
 from datetime import datetime
 from discord.ext import tasks
 
-
+token = os.getenv('DISCORD_TOKEN')
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
@@ -53,4 +53,4 @@ async def on_message(message):
 #ループ処理
 time_check.start()
 # Botの起動とDiscordサーバーへの接続
-client.run(TOKEN)
+client.run(token)
