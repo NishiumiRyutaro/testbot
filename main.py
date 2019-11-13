@@ -13,13 +13,13 @@ client = discord.Client()
 
 #投稿する日時
 DefensedateTimeList = [
-'2019/11/13 19:00',
-'2019/11/13 18:30',
-'2019/11/13 14:18',
-'2019/05/22 14:19',
-'2019/05/23 14:20',
-'2019/05/24 14:21',
-'2019/05/25 14:22'
+'2019/11/13 08:55',
+'2019/11/13 08:56',
+'2019/11/13 08:57',
+'2019/05/22 08:58',
+'2019/05/23 08:59',
+'2019/05/24 09:00',
+'2019/05/25 09:02'
 ]
 
 AttackdateTimeList = [
@@ -56,8 +56,7 @@ async def on_message(message):
         return
     # 使用できるコマンド一覧
     if message.content == '!help':
-        now = datetime.now().strftime('%Y/%m/%d %H:%M:%S')
-        await message.channel.send(now)
+        await message.channel.send('hey')
 
 #ループ処理
 time_check.start()
