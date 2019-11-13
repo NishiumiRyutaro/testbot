@@ -5,6 +5,8 @@ from datetime import datetime
 from discord.ext import tasks
 
 token = os.getenv('DISCORD_TOKEN')
+channel_id = os.getenv('CHANNEL_ID')
+
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
@@ -30,7 +32,7 @@ async def on_ready():
     print('ready')
 
 async def DSendMessage():
-    channel = client.get_channel(CHANNEL_ID)
+    channel = client.get_channel(channel_id)
     await channel.send('攻撃アビの時間だよ')
     await channel.send('防衛アビの時間だよ')
     await asyncio.sleep(30)
