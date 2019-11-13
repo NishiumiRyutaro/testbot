@@ -57,7 +57,7 @@ async def on_message(message):
     # 使用できるコマンド一覧
     if message.content == '!help':
         now = datetime.now().strftime('%Y/%m/%d %H:%M:%S')
-        await message.channel.send()
+        await message.channel.send(now)
 
 #ループ処理
 time_check.start()
