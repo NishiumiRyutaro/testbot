@@ -5,8 +5,7 @@ from datetime import datetime
 from discord.ext import tasks
 
 token = os.getenv('DISCORD_TOKEN')
-channel_id = os.getenv('CHANNEL_ID')
-
+channel_id = 629674683695890449
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
@@ -19,7 +18,7 @@ DefensedateTimeList = [
 '2019/11/13 09:53',
 '2019/11/13 09:54',
 '2019/11/13 09:55',
-'2019/11/13 09:56'
+'2019/11/13 14:40'
 ]
 
 AttackdateTimeList = [
