@@ -18,7 +18,7 @@ DefensedateTimeList = [
 '2019/11/13 09:53',
 '2019/11/13 09:54',
 '2019/11/13 09:55',
-'2019/11/13 14:45'
+'2019/11/13 14:47'
 ]
 CommndList = [
     "21時からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
@@ -57,7 +57,7 @@ async def on_message(message):
     if message.content == '!nowtime':
         now = datetime.now().strftime('%Y/%m/%d %H:%M')
         await message.channel.send(now)
-    elif message.content != None:
+    if message.content != None:
         x = message.content
         m = re.search(r'!つよばは21時', x, flags=re.DOTALL)
         if m :
