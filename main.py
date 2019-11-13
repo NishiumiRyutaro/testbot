@@ -19,10 +19,10 @@ DefensedateTimeList = [
 '09:53',
 '09:54',
 '09:55',
-'15:06'
+'15:10'
 ]
 FOdateTimeList = [
-'15:08',
+'15:10',
 '07:00'
 ]
 ProtCommndList = [
@@ -74,15 +74,15 @@ async def on_message(message):
         p = re.search(r'!つよばは22時', x, flags=re.DOTALL)
         q = re.search(r'!つよばは21時', x, flags=re.DOTALL)
         if m :
-            await message.channel.send(CommndList[0])
+            await message.channel.send(ProtCommndList[0])
         if l :
-            await message.channel.send(CommndList[1])
+            await message.channel.send(ProtCommndList[1])
         if o :
-            await message.channel.send(CommndList[2])
+            await message.channel.send(ProtCommndList[2])
         if p :
-            await message.channel.send(CommndList[3])
+            await message.channel.send(ProtCommndList[3])
         if q :
-            await message.channel.send(CommndList[4])
+            await message.channel.send(ProtCommndList[4])
 #ループ処理
 time_check.start()
 # Botの起動とDiscordサーバーへの接続
