@@ -3,6 +3,7 @@ import os
 import discord
 from datetime import datetime
 from discord.ext import tasks
+import re
 
 token = os.getenv('DISCORD_TOKEN')
 channel_id = 629674683695890449
@@ -18,7 +19,7 @@ DefensedateTimeList = [
 '2019/11/13 09:53',
 '2019/11/13 09:54',
 '2019/11/13 09:55',
-'2019/11/13 14:47'
+'2019/11/13 14:49'
 ]
 CommndList = [
     "21時からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
