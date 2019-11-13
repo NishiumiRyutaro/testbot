@@ -18,9 +18,12 @@ DefensedateTimeList = [
 '2019/11/13 09:53',
 '2019/11/13 09:54',
 '2019/11/13 09:55',
-'2019/11/13 14:40'
+'2019/11/13 14:45'
 ]
-
+CommndList = [
+    "21時からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
+    "22時からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。"
+]
 AttackdateTimeList = [
 '2019/11/13 12:24:00',
 '2019/05/25 07:00:00'
@@ -34,7 +37,7 @@ async def DSendMessage():
     channel = client.get_channel(channel_id)
     await channel.send('攻撃アビの時間だよ')
     await channel.send('防衛アビの時間だよ')
-    await asyncio.sleep(30)
+    await asyncio.sleep(35)
 # 30秒に一回ループ
 @tasks.loop(seconds=0)
 async def time_check():
@@ -51,10 +54,14 @@ async def on_message(message):
     if message.author.bot:
         return
     # 使用できるコマンド一覧
-    if message.content == '!help':
+    if message.content == '!nowtime':
         now = datetime.now().strftime('%Y/%m/%d %H:%M')
         await message.channel.send(now)
-
+    elif message.content != None:
+        x = message.content
+        m = re.search(r'!つよばは21時', x, flags=re.DOTALL)
+        if m :
+            await message.channel.send(CommndList[0])
 #ループ処理
 time_check.start()
 # Botの起動とDiscordサーバーへの接続
