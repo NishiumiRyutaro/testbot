@@ -7,7 +7,7 @@ import re
 import asyncio
 
 token = os.getenv('DISCORD_TOKEN')
-channel_id = 629674683695890449
+channel_id = 644577870764703765
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
@@ -15,6 +15,7 @@ client = discord.Client()
 #投稿する日時
 AlldateTimeList = [
  '14:55:00',
+ '01:48:00', 
  '19:55:00'
 ]
 ADdateTimeList = [
