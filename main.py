@@ -14,12 +14,15 @@ client = discord.Client()
 
 #投稿する日時
 AlldateTimeList = [
+ '14:55:00',
  '19:55:00'
 ]
 ADdateTimeList = [
+ '15:55:00',
  '20:55:00' 
 ]
 FOdateTimeList = [
+ '16:55:00',
  '22:55:00'
  ]
 readydateTimeList = [
