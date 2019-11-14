@@ -15,7 +15,7 @@ client = discord.Client()
 #投稿する日時
 AlldateTimeList = [
  '14:55:00',
- '01:48:00', 
+ '01:49:00', 
  '19:55:00'
 ]
 ADdateTimeList = [
