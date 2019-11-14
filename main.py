@@ -14,16 +14,16 @@ client = discord.Client()
 
 #投稿する日時
 AlldateTimeList = [
- '11:00:00'
+ '19:55:00'
 ]
 ADdateTimeList = [
- '12:00:00' 
+ '20:55:00' 
 ]
 FOdateTimeList = [
- '14:00:00'
+ '22:55:00'
  ]
 readydateTimeList = [
- '22:00:00'
+ '06:55:00'
  ]
 ProtCommndList = [
     "20時30分からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
@@ -39,22 +39,22 @@ async def on_ready():
 
 async def AllSendMessage():
     channel = client.get_channel(channel_id)
-    await channel.send('攻撃アビの時間だよ')
-    await channel.send('防衛アビの時間だよ')
-    await channel.send('副団アビの時間だよ')
+    await channel.send('攻撃アビ発動5分前です')
+    await channel.send('防衛アビ発動5分前です')
+    await channel.send('副団アビ発動5分前です')
     await asyncio.sleep(35)    
 async def ADSendMessage():
     channel = client.get_channel(channel_id)
-    await channel.send('攻撃アビの時間だよ')
-    await channel.send('防衛アビの時間だよ')
+    await channel.send('攻撃アビ発動5分前です')
+    await channel.send('防衛アビ発動5分前です')
     await asyncio.sleep(35)
 async def FOSendMessage():
     channel = client.get_channel(channel_id)
-    await channel.send('副団アビの時間だよ')
+    await channel.send('副団アビ発動5分前です')
     await asyncio.sleep(35)
 async def readySendMessage():
     channel = client.get_channel(channel_id)
-    await channel.send('明日は古戦場だよ')
+    await channel.send('もうすぐ古戦場だよ')
     await asyncio.sleep(35)
 # 30秒に一回ループ
 @tasks.loop(seconds=0)
