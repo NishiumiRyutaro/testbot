@@ -7,7 +7,7 @@ import re
 import asyncio
 
 token = os.getenv('DISCORD_TOKEN')
-channel_id = 644577870764703765
+channel_id = 644583189331050537
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
