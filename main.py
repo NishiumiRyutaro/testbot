@@ -14,20 +14,12 @@ client = discord.Client()
 
 #投稿する日時
 AlldateTimeList = [
- '14:55:00',
- '01:49:00', 
  '19:55:00'
 ]
-ADdateTimeList = [
- '15:55:00',
- '20:55:00' 
-]
 FOdateTimeList = [
- '16:55:00',
  '22:55:00'
  ]
 readydateTimeList = [
- '06:55:00',
  '18:55:00'
  ]
 ProtCommndList = [
@@ -48,26 +40,19 @@ async def AllSendMessage():
     await channel.send('防衛アビ発動5分前です')
     await channel.send('副団アビ発動5分前です')
     await asyncio.sleep(35)    
-async def ADSendMessage():
-    channel = client.get_channel(channel_id)
-    await channel.send('攻撃アビ発動5分前です')
-    await channel.send('防衛アビ発動5分前です')
-    await asyncio.sleep(35)
 async def FOSendMessage():
     channel = client.get_channel(channel_id)
     await channel.send('副団アビ発動5分前です')
     await asyncio.sleep(35)
 async def readySendMessage():
     channel = client.get_channel(channel_id)
-    await channel.send('もうすぐ古戦場だよ')
+    await channel.send('古戦場だよ')
     await asyncio.sleep(35)
 # 30秒に一回ループ
 @tasks.loop(seconds=0)
 async def time_check():
     # 現在の時刻
     now = datetime.now().strftime('%H:%M:%S')
-    if now in ADdateTimeList:
-        await ADSendMessage()
     if now in AlldateTimeList:
         await AllSendMessage()
     if now in FOdateTimeList:
