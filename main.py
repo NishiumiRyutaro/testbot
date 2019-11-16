@@ -5,6 +5,9 @@ from datetime import datetime
 from discord.ext import tasks
 import re
 import asyncio
+from foo import ProtCommndList
+from foo import AruCommndList
+from foo import RushiCommndList
 
 token = os.getenv('DISCORD_TOKEN')
 channel_id = 644583189331050537
@@ -22,13 +25,7 @@ FOdateTimeList = [
 readydateTimeList = [
  '06:55:00'
  ]
-ProtCommndList = [
-    "20時30分からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
-    "21時からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
-    "21時30分からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
-    "22時からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。",
-    "22時30分からつよばは連戦部屋建て&環境役をやります。参加予定の方は30分前までにスプシに自発予定とあわせて書きこんでおいてください。人数によっては部屋を分ける場合もあります。"
-]
+
 # 起動時に動作する処理
 @client.event
 async def on_ready():
