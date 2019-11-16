@@ -69,11 +69,14 @@ async def on_message(message):
         await message.channel.send(now)
     if message.content != None:
         x = message.content
+        if x.find('!') == 0:
+            await message.delete()
         m = re.search(r'!つよばは20時30分', x, flags=re.DOTALL)
         l = re.search(r'!つよばは21時', x, flags=re.DOTALL)
         o = re.search(r'!つよばは21時30分', x, flags=re.DOTALL)
         p = re.search(r'!つよばは22時', x, flags=re.DOTALL)
         q = re.search(r'!つよばは22時30分', x, flags=re.DOTALL)
+        arubaha = re.search(r'!あるばは21時', x, flags=re.DOTALL)
         if m :
             await message.channel.send(ProtCommndList[0])
         if l :
@@ -83,7 +86,9 @@ async def on_message(message):
         if p :
             await message.channel.send(ProtCommndList[3])
         if q :
-            await message.channel.send(ProtCommndList[4])
+            await message.channel.send(ProtCommndList[4])        
+        if arubaha :
+            await message.channel.send(AruCommndList[0])
 #ループ処理
 time_check.start()
 # Botの起動とDiscordサーバーへの接続
