@@ -47,6 +47,8 @@ async def on_message(message):
     if message.content == '!nowtime':
         now = datetime.now().strftime('%H:%M:%S')
         await message.channel.send(now)
+    if message.content == '!specification':
+     　 await message.channel.send('spバトル仕様だよ')
     if message.content != None:
         x = message.content
         if x.find('!') == 0:
