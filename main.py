@@ -35,7 +35,7 @@ async def on_message(message):
         return
     # 使用できるコマンド一覧
     if message.content == '!specification':
-        await message.channel.send('sp')
+        await message.channel.send('normal')
     if message.content == '!nowtime':
         now = datetime.now().strftime('%H:%M:%S')
         await message.channel.send(now)
