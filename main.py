@@ -10,6 +10,7 @@ from foo import AruCommndList
 from foo import RushiCommndList
 from foo import allcmdlist
 from foo import MarisuCommndList
+from foo import mList
 
 token = os.getenv('DISCORD_TOKEN')
 channel_id = 644583189331050537
@@ -44,6 +45,8 @@ async def on_message(message):
         testcmd_new = testcmd.replace(',', '\n')                    #
         allcmdlist_new =  testcmd_new.split(",")                    #
         await message.channel.send(testcmd_new.replace('"', '\n'))  #
+    if message.content == 'mlist':
+        await message.channel.send('\n'+mlist[0]+'\n'+mlist[1]+'\n'+mlist[2]+'\n'+mlist[3])
     if message.content != None:
         x = message.content
         a = re.search(r',.*', x, flags=re.DOTALL)
