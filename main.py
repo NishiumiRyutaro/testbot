@@ -71,7 +71,7 @@ async def on_message(message):
             rn = re.search(r'るし2200', x, flags=re.DOTALL)
             ro = re.search(r'るし2230', x, flags=re.DOTALL)
             rp = re.search(r'るし2300', x, flags=re.DOTALL)            
-        if a != None :            
+         if a != None :            
             a = a.group(0).replace(',', '')             
             if tm:
                 await message.channel.send(a+'日'+ProtCommndList[0])
