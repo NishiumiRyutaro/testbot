@@ -32,7 +32,13 @@ async def time_check():
 @client.event
 async def on_message(message):
     if message.author.bot:
-        return    
+        return
+    # 使用できるコマンド一覧
+    if message.content == '!specification':
+        await message.channel.send('sp')
+    if message.content == '!nowtime':
+        now = datetime.now().strftime('%H:%M:%S')
+        await message.channel.send(now)
     if message.content == 'list':
         testcmd = ",".join(allcmdlist)                              # コマンドリスト関連
         testcmd_new = testcmd.replace(',', '\n')                    #
