@@ -10,7 +10,7 @@ from foo import AruCommndList
 from foo import RushiCommndList
 from foo import allcmdlist
 from foo import MarisuCommndList
-from foo import mist
+from foo import mlist
 
 token = os.getenv('DISCORD_TOKEN')
 channel_id = 644583189331050537
