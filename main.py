@@ -46,9 +46,9 @@ async def on_message(message):
     if message.content == 'mlist':
         await message.channel.send('\n'+mlist[0]+'\n'+mlist[1]+'\n'+mlist[2]+'\n'+mlist[3])
     if message.content != None:
+        x = message.content
         if x.find('!') == 0:
-            await message.delete()
-            x = message.content    
+            await message.delete()  
             a = re.search(r',.*', x, flags=re.DOTALL)
             #b = re.search(r'@.*', x, flags=re.DOTALL)
             if re.findall('^!', x, flags=re.IGNORECASE):
