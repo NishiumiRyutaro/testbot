@@ -14,20 +14,10 @@ channel_id = 644583189331050537
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
-
-#投稿する日時
-readydateTimeList = [
- '06:55:00'
- ]
-
 # 起動時に動作する処理
 @client.event
 async def on_ready():
     print('ready')
-async def readySendMessage():
-    channel = client.get_channel(channel_id)
-    await channel.send('SPバトルだよ')
-    await asyncio.sleep(35)
 # 30秒に一回ループ
 @tasks.loop(seconds=0)
 async def time_check():
@@ -45,6 +35,9 @@ async def on_message(message):
     # 使用できるコマンド一覧
     if message.content == '!specification':
         await message.channel.send('sp')
+    elif message.content == '!nowtime':
+        now = datetime.now().strftime('%H:%M:%S')
+        await message.channel.send(now)
     if message.content != None:
         x = message.content
         if x.find('!') == 0:
