@@ -12,7 +12,12 @@ from foo import MarisuCommndList
 from foo import mlist
 
 token = os.getenv('DISCORD_TOKEN')
-channel_id = 644583189331050537
+#channel_id = 644583189331050537
+TsuyoCHANNEL_ID = 645174728230699018 #チャンネルID
+RushiCHANNEL_ID = 645174788897374208 #チャンネルID
+AruCHANNEL_ID = 645174819188506644 #チャンネルID
+MarisuCHANNEL_ID = 647285128514502656 #チャンネルID
+
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 # 起動時に動作する処理
@@ -75,86 +80,127 @@ async def on_message(message):
         if a != None :            
             a = a.group(0).replace(',', '')             
             if tm:
-                await message.channel.send(a+'日'+ProtCommndList[0])
+                channel = client.get_channel(TsuyoCHANNEL_ID)
+                await channel.send(TsuyoCHANNEL_ID)
+                await channel.send(a+'日'+ProtCommndList[0])
             if tl:
-                await message.channel.send(a+'日'+ProtCommndList[1])
+                channel = client.get_channel(TsuyoCHANNEL_ID)
+                await channel.send(a+'日'+ProtCommndList[1])
             if tn:
-                await message.channel.send(a+'日'+ProtCommndList[2])
+                channel = client.get_channel(TsuyoCHANNEL_ID)
+                await channel.send(a+'日'+ProtCommndList[2])
             if to:
-                await message.channel.send(a+'日'+ProtCommndList[3])
+                channel = client.get_channel(TsuyoCHANNEL_ID)
+                await channel.send(a+'日'+ProtCommndList[3])
             if tp:
-                await message.channel.send(a+'日'+ProtCommndList[4])
+                channel = client.get_channel(TsuyoCHANNEL_ID)
+                await channel.send(a+'日'+ProtCommndList[4])
             if mm:
-                await message.channel.send(a+'日'+MarisuCommndList[0])
+                channel = client.get_channel(MarisuCHANNEL_ID)
+                await channel.send(a+'日'+MarisuCommndList[0])
             if ml:
-                await message.channel.send(a+'日'+MarisuCommndList[1])
+                channel = client.get_channel(MarisuCHANNEL_ID)
+                await channel.send(a+'日'+MarisuCommndList[1])
             if mn:
-                await message.channel.send(a+'日'+MarisuCommndList[2])
+                channel = client.get_channel(MarisuCHANNEL_ID)
+                await channel.send(a+'日'+MarisuCommndList[2])
             if mo:
-                await message.channel.send(a+'日'+MarisuCommndList[3])
+                channel = client.get_channel(MarisuCHANNEL_ID)
+                await channel.send(a+'日'+MarisuCommndList[3])
             if mp:
-                await message.channel.send(a+'日'+MarisuCommndList[4])
+                channel = client.get_channel(MarisuCHANNEL_ID)
+                await channel.send(a+'日'+MarisuCommndList[4])
             if am:
-                await message.channel.send(a+'日'+AruCommndList[0])
+                channel = client.get_channel(AruCHANNEL_ID)
+                await channel.send(a+'日'+AruCommndList[0])
             if al:
-                await message.channel.send(a+'日'+AruCommndList[1])
+                channel = client.get_channel(AruCHANNEL_ID)
+                await channel.send(a+'日'+AruCommndList[1])
             if an:
-                await message.channel.send(a+'日'+AruCommndList[2])
+                channel = client.get_channel(AruCHANNEL_ID)
+                await channel.send(a+'日'+AruCommndList[2])
             if ao:
-                await message.channel.send(a+'日'+AruCommndList[3])
+                channel = client.get_channel(AruCHANNEL_ID)
+                await channel.send(a+'日'+AruCommndList[3])
             if ap:
-                await message.channel.send(a+'日'+AruCommndList[4])
+                channel = client.get_channel(AruCHANNEL_ID)
+                await channel.send(a+'日'+AruCommndList[4])
             if rm: 
-                await message.channel.send(a+'日'+RushiCommndList[0])
+                channel = client.get_channel(RushiCHANNEL_ID)
+                await channel.send(a+'日'+RushiCommndList[0])
             if rl: 
-                await message.channel.send(a+'日'+RushiCommndList[1])
+                channel = client.get_channel(RushiCHANNEL_ID)
+                await channel.send(a+'日'+RushiCommndList[1])
             if rn: 
-                await message.channel.send(a+'日'+RushiCommndList[2])
+                channel = client.get_channel(RushiCHANNEL_ID)
+                await channel.send(a+'日'+RushiCommndList[2])
             if ro: 
-                await message.channel.send(a+'日'+RushiCommndList[3])
+                channel = client.get_channel(RushiCHANNEL_ID)
+                await channel.send(a+'日'+RushiCommndList[3])
             if rp: 
-                await message.channel.send(a+'日'+RushiCommndList[4])
+                channel = client.get_channel(RushiCHANNEL_ID)
+                await channel.send(a+'日'+RushiCommndList[4])
         elif a == None:
             if tm:
-                await message.channel.send(ProtCommndList[0])
+                channel = client.get_channel(TsuyoCHANNEL_ID)
+                await channel.send(ProtCommndList[0])
             if tl:
-                await message.channel.send(ProtCommndList[1])
+                channel = client.get_channel(TsuyoCHANNEL_ID)
+                await channel.send(ProtCommndList[1])
             if tn:
-                await message.channel.send(ProtCommndList[2])
+                channel = client.get_channel(TsuyoCHANNEL_ID)
+                await channel.send(ProtCommndList[2])
             if to:
-                await message.channel.send(ProtCommndList[3])
+                channel = client.get_channel(TsuyoCHANNEL_ID)
+                await channel.send(ProtCommndList[3])
             if tp:
-                await message.channel.send(ProtCommndList[4])
+                channel = client.get_channel(TsuyoCHANNEL_ID)
+                await channel.send(ProtCommndList[4])
             if mm:
-                await message.channel.send(MarisuCommndList[0])
+                channel = client.get_channel(MarisuCHANNEL_ID)
+                await channel.send(MarisuCommndList[0])
             if ml:
-                await message.channel.send(MarisuCommndList[1])
+                channel = client.get_channel(MarisuCHANNEL_ID)
+                await channel.send(MarisuCommndList[1])
             if mn:
-                await message.channel.send(MarisuCommndList[2])
+                channel = client.get_channel(MarisuCHANNEL_ID)
+                await channel.send(MarisuCommndList[2])
             if mo:
-                await message.channel.send(MarisuCommndList[3])
+                channel = client.get_channel(MarisuCHANNEL_ID)
+                await channel.send(MarisuCommndList[3])
             if mp:
-                await message.channel.send(MarisuCommndList[4])
+                channel = client.get_channel(MarisuCHANNEL_ID)
+                await channel.send(MarisuCommndList[4])
             if am:
-                await message.channel.send(AruCommndList[0])
+                channel = client.get_channel(AruCHANNEL_ID)
+                await channel.send(AruCommndList[0])
             if al:
-                await message.channel.send(AruCommndList[1])
+                channel = client.get_channel(AruCHANNEL_ID)
+                await channel.send(AruCommndList[1])
             if an:
-                await message.channel.send(AruCommndList[2])
+                channel = client.get_channel(AruCHANNEL_ID)
+                await channel.send(AruCommndList[2])
             if ao:
-                await message.channel.send(AruCommndList[3])
+                channel = client.get_channel(AruCHANNEL_ID)
+                await channel.send(AruCommndList[3])
             if ap:
-                await message.channel.send(AruCommndList[4])
+                channel = client.get_channel(AruCHANNEL_ID)
+                await channel.send(AruCommndList[4])
             if rm: 
-                await message.channel.send(RushiCommndList[0])
+                channel = client.get_channel(RushiCHANNEL_ID)
+                await channel.send(RushiCommndList[0])
             if rl: 
-                await message.channel.send(RushiCommndList[1])
+                channel = client.get_channel(RushiCHANNEL_ID)
+                await channel.send(RushiCommndList[1])
             if rn: 
-                await message.channel.send(RushiCommndList[2])
+                channel = client.get_channel(RushiCHANNEL_ID)
+                await channel.send(RushiCommndList[2])
             if ro: 
-                await message.channel.send(RushiCommndList[3])
+                channel = client.get_channel(RushiCHANNEL_ID)
+                await channel.send(RushiCommndList[3])
             if rp: 
-                await message.channel.send(RushiCommndList[4])
+                channel = client.get_channel(RushiCHANNEL_ID)
+                await channel.send(RushiCommndList[4])
 #ループ処理
 time_check.start()
 # Botの起動とDiscordサーバーへの接続
