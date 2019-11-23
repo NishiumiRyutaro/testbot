@@ -57,71 +57,28 @@ async def on_message(message):
             a = re.search(r',.*', x, flags=re.DOTALL)
             #b = re.search(r'@.*', x, flags=re.DOTALL)
             if re.findall('^!', x, flags=re.IGNORECASE):
-                if  re.search(r'e', x, flags=re.DOTALL):
-                    mme = re.search(r'まりす2030', x, flags=re.DOTALL)
-                    mle = re.search(r'まりす2100', x, flags=re.DOTALL)
-                    mne = re.search(r'まりす2130', x, flags=re.DOTALL)
-                    moe = re.search(r'まりす2200', x, flags=re.DOTALL)
-                    mpe = re.search(r'まりす2230', x, flags=re.DOTALL)
-                elif re.search(r'm', x, flags=re.DOTALL):
-                    mmm = re.search(r'まりす2030', x, flags=re.DOTALL)
-                    mlm = re.search(r'まりす2100', x, flags=re.DOTALL)
-                    mnm = re.search(r'まりす2130', x, flags=re.DOTALL)
-                    mom = re.search(r'まりす2200', x, flags=re.DOTALL)
-                    mpm = re.search(r'まりす2230', x, flags=re.DOTALL)
-                else:
-                    tm = re.search(r'つよばは2030', x, flags=re.DOTALL)
-                    tl = re.search(r'つよばは2100', x, flags=re.DOTALL)
-                    tn = re.search(r'つよばは2130', x, flags=re.DOTALL)
-                    to = re.search(r'つよばは2200', x, flags=re.DOTALL)
-                    tp = re.search(r'つよばは2230', x, flags=re.DOTALL)
-                    mm = re.search(r'まりす2030', x, flags=re.DOTALL)
-                    ml = re.search(r'まりす2100', x, flags=re.DOTALL)
-                    mn = re.search(r'まりす2130', x, flags=re.DOTALL)
-                    mo = re.search(r'まりす2200', x, flags=re.DOTALL)
-                    mp = re.search(r'まりす2230', x, flags=re.DOTALL)
-                    am = re.search(r'!あるばは2030', x, flags=re.DOTALL)
-                    al = re.search(r'!あるばは2100', x, flags=re.DOTALL)
-                    an = re.search(r'!あるばは2130', x, flags=re.DOTALL)
-                    ao = re.search(r'!あるばは2200', x, flags=re.DOTALL)
-                    ap = re.search(r'!あるばは2230', x, flags=re.DOTALL)
-                    rm = re.search(r'るし2100', x, flags=re.DOTALL)
-                    rl = re.search(r'るし2130', x, flags=re.DOTALL)
-                    rn = re.search(r'るし2200', x, flags=re.DOTALL)
-                    ro = re.search(r'るし2230', x, flags=re.DOTALL)
-                    rp = re.search(r'るし2300', x, flags=re.DOTALL)            
+                tm = re.search(r'つよばは2030', x, flags=re.DOTALL)
+                tl = re.search(r'つよばは2100', x, flags=re.DOTALL)
+                tn = re.search(r'つよばは2130', x, flags=re.DOTALL)
+                to = re.search(r'つよばは2200', x, flags=re.DOTALL)
+                tp = re.search(r'つよばは2230', x, flags=re.DOTALL)
+                mm = re.search(r'まりす2030', x, flags=re.DOTALL)
+                ml = re.search(r'まりす2100', x, flags=re.DOTALL)
+                mn = re.search(r'まりす2130', x, flags=re.DOTALL)
+                mo = re.search(r'まりす2200', x, flags=re.DOTALL)
+                mp = re.search(r'まりす2230', x, flags=re.DOTALL)
+                am = re.search(r'!あるばは2030', x, flags=re.DOTALL)
+                al = re.search(r'!あるばは2100', x, flags=re.DOTALL)
+                an = re.search(r'!あるばは2130', x, flags=re.DOTALL)
+                ao = re.search(r'!あるばは2200', x, flags=re.DOTALL)
+                ap = re.search(r'!あるばは2230', x, flags=re.DOTALL)
+                rm = re.search(r'るし2100', x, flags=re.DOTALL)
+                rl = re.search(r'るし2130', x, flags=re.DOTALL)
+                rn = re.search(r'るし2200', x, flags=re.DOTALL)
+                ro = re.search(r'るし2230', x, flags=re.DOTALL)
+                rp = re.search(r'るし2300', x, flags=re.DOTALL)            
             if a != None :            
                 a = a.group(0).replace(',', '')
-                if mme:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuMyECommndList[0])
-                if mle:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuMyECommndList[0])
-                if mne:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuMyECommndList[0])
-                if moe:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuMyECommndList[0])
-                if mpe:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuMyECommndList[0])
-                if mmm:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuMyMCommndList[0])
-                if mlm:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuMyMCommndList[1])
-                if mnm:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuMyMCommndList[2])
-                if mom:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuMyMCommndList[3])
-                if mpm:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuMyMCommndList[4])      
                 if tm:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
                     await channel.send(TsuyoCHANNEL_ID)
@@ -184,36 +141,6 @@ async def on_message(message):
                     channel = client.get_channel(RushiCHANNEL_ID)
                     await channel.send(a+'日'+RushiCommndList[4])
             elif a == None:
-                if mme:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuMyECommndList[0])
-                if mle:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuMyECommndList[1])
-                if mne:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuMyECommndList[2])
-                if moe:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuMyMCommndList[3])
-                if mpe:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuMyMCommndList[4])
-                if mmm:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuMyMCommndList[0])
-                if mlm:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuMyMCommndList[1])
-                if mnm:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuMyMCommndList[2])
-                if mom:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuMyMCommndList[3])
-                if mpm:
-                    channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuMyMCommndList[4])
                 if tm:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
                     await channel.send(ProtCommndList[0])
