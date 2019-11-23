@@ -37,7 +37,7 @@ async def time_check():
 async def on_message(message):
     if message.author.bot:
         return
-    print (message.author.name)
+    await message.channel.send(message.author.name)
     # 使用できるコマンド一覧
     if message.content == '!specification':
         await message.channel.send('normal')
