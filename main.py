@@ -35,9 +35,9 @@ async def time_check():
 # メッセージ受信時に動作する処理
 @client.event
 async def on_message(message):
-    print (message.author.id)
     if message.author.bot:
         return
+    print (message.author.name)
     # 使用できるコマンド一覧
     if message.content == '!specification':
         await message.channel.send('normal')
