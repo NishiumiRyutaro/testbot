@@ -37,7 +37,6 @@ async def time_check():
 async def on_message(message):
     if message.author.bot:
         return
-    await message.channel.send(message.author.name)
     # 使用できるコマンド一覧
     if message.content == '!specification':
         await message.channel.send('normal')
@@ -202,6 +201,7 @@ async def on_message(message):
                 if rp: 
                     channel = client.get_channel(RushiCHANNEL_ID)
                     await channel.send(RushiCommndList[4])
+    await message.channel.send(message.author.name)
 #ループ処理
 time_check.start()
 # Botの起動とDiscordサーバーへの接続
