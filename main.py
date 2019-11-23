@@ -54,7 +54,7 @@ async def on_message(message):
         x = message.content
         if x.find('!') == 0:
             await message.delete()  
-            await message.channel.send('from'+message.author.name)
+            fromname = ('from'+message.author.name)
             a = re.search(r',.*', x, flags=re.DOTALL)
             #b = re.search(r'@.*', x, flags=re.DOTALL)
             if re.findall('^!', x, flags=re.IGNORECASE):
@@ -83,125 +83,125 @@ async def on_message(message):
                 if tm:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
                     await channel.send(TsuyoCHANNEL_ID)
-                    await channel.send(a+'日'+ProtCommndList[0])
+                    await channel.send(a+'日'+ProtCommndList[0]+fromname)
                 if tl:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
-                    await channel.send(a+'日'+ProtCommndList[1])
+                    await channel.send(a+'日'+ProtCommndList[1]+fromname)
                 if tn:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
-                    await channel.send(a+'日'+ProtCommndList[2])
+                    await channel.send(a+'日'+ProtCommndList[2]+fromname)
                 if to:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
-                    await channel.send(a+'日'+ProtCommndList[3])
+                    await channel.send(a+'日'+ProtCommndList[3]+fromname)
                 if tp:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
-                    await channel.send(a+'日'+ProtCommndList[4])
+                    await channel.send(a+'日'+ProtCommndList[4]+fromname)
                 if mm:
                     channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuCommndList[0])
+                    await channel.send(a+'日'+MarisuCommndList[0]+fromname)
                 if ml:
                     channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuCommndList[1])
+                    await channel.send(a+'日'+MarisuCommndList[1]+fromname)
                 if mn:
                     channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuCommndList[2])
+                    await channel.send(a+'日'+MarisuCommndList[2]+fromname)
                 if mo:
                     channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuCommndList[3])
+                    await channel.send(a+'日'+MarisuCommndList[3]+fromname)
                 if mp:
                     channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(a+'日'+MarisuCommndList[4])
+                    await channel.send(a+'日'+MarisuCommndList[4]+fromname)
                 if am:
                     channel = client.get_channel(AruCHANNEL_ID)
-                    await channel.send(a+'日'+AruCommndList[0])
+                    await channel.send(a+'日'+AruCommndList[0]+fromname)
                 if al:
                     channel = client.get_channel(AruCHANNEL_ID)
-                    await channel.send(a+'日'+AruCommndList[1])
+                    await channel.send(a+'日'+AruCommndList[1]+fromname)
                 if an:
                     channel = client.get_channel(AruCHANNEL_ID)
-                    await channel.send(a+'日'+AruCommndList[2])
+                    await channel.send(a+'日'+AruCommndList[2]+fromname)
                 if ao:
                     channel = client.get_channel(AruCHANNEL_ID)
-                    await channel.send(a+'日'+AruCommndList[3])
+                    await channel.send(a+'日'+AruCommndList[3]+fromname)
                 if ap:
                     channel = client.get_channel(AruCHANNEL_ID)
-                    await channel.send(a+'日'+AruCommndList[4])
+                    await channel.send(a+'日'+AruCommndList[4]+fromname)
                 if rm: 
                     channel = client.get_channel(RushiCHANNEL_ID)
-                    await channel.send(a+'日'+RushiCommndList[0])
+                    await channel.send(a+'日'+RushiCommndList[0]+fromname)
                 if rl: 
                     channel = client.get_channel(RushiCHANNEL_ID)
-                    await channel.send(a+'日'+RushiCommndList[1])
+                    await channel.send(a+'日'+RushiCommndList[1]+fromname)
                 if rn: 
                     channel = client.get_channel(RushiCHANNEL_ID)
-                    await channel.send(a+'日'+RushiCommndList[2])
+                    await channel.send(a+'日'+RushiCommndList[2]+fromname)
                 if ro: 
                     channel = client.get_channel(RushiCHANNEL_ID)
-                    await channel.send(a+'日'+RushiCommndList[3])
+                    await channel.send(a+'日'+RushiCommndList[3]+fromname)
                 if rp: 
                     channel = client.get_channel(RushiCHANNEL_ID)
-                    await channel.send(a+'日'+RushiCommndList[4])
+                    await channel.send(a+'日'+RushiCommndList[4]+fromname)
             elif a == None:
                 if tm:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
-                    await channel.send(ProtCommndList[0])
+                    await channel.send(ProtCommndList[0]+fromname)
                 if tl:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
-                    await channel.send(ProtCommndList[1])
+                    await channel.send(ProtCommndList[1]+fromname)
                 if tn:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
-                    await channel.send(ProtCommndList[2])
+                    await channel.send(ProtCommndList[2]+fromname)
                 if to:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
-                    await channel.send(ProtCommndList[3])
+                    await channel.send(ProtCommndList[3]+fromname)
                 if tp:
                     channel = client.get_channel(TsuyoCHANNEL_ID)
-                    await channel.send(ProtCommndList[4])
+                    await channel.send(ProtCommndList[4]+fromname)
                 if mm:
                     channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuCommndList[0])
+                    await channel.send(MarisuCommndList[0]+fromname)
                 if ml:
                     channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuCommndList[1])
+                    await channel.send(MarisuCommndList[1]+fromname)
                 if mn:
                     channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuCommndList[2])
+                    await channel.send(MarisuCommndList[2]+fromname)
                 if mo:
                     channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuCommndList[3])
+                    await channel.send(MarisuCommndList[3]+fromname)
                 if mp:
                     channel = client.get_channel(MarisuCHANNEL_ID)
-                    await channel.send(MarisuCommndList[4])
+                    await channel.send(MarisuCommndList[4]+fromname)
                 if am:
                     channel = client.get_channel(AruCHANNEL_ID)
-                    await channel.send(AruCommndList[0])
+                    await channel.send(AruCommndList[0]+fromname)
                 if al:
                     channel = client.get_channel(AruCHANNEL_ID)
-                    await channel.send(AruCommndList[1])
+                    await channel.send(AruCommndList[1]+fromname)
                 if an:
                     channel = client.get_channel(AruCHANNEL_ID)
-                    await channel.send(AruCommndList[2])
+                    await channel.send(AruCommndList[2]+fromname)
                 if ao:
                     channel = client.get_channel(AruCHANNEL_ID)
-                    await channel.send(AruCommndList[3])
+                    await channel.send(AruCommndList[3]+fromname)
                 if ap:
                     channel = client.get_channel(AruCHANNEL_ID)
-                    await channel.send(AruCommndList[4])
+                    await channel.send(AruCommndList[4]+fromname)
                 if rm: 
                     channel = client.get_channel(RushiCHANNEL_ID)
-                    await channel.send(RushiCommndList[0])
+                    await channel.send(RushiCommndList[0]+fromname)
                 if rl: 
                     channel = client.get_channel(RushiCHANNEL_ID)
-                    await channel.send(RushiCommndList[1])
+                    await channel.send(RushiCommndList[1]+fromname)
                 if rn: 
                     channel = client.get_channel(RushiCHANNEL_ID)
-                    await channel.send(RushiCommndList[2])
+                    await channel.send(RushiCommndList[2]+fromname)
                 if ro: 
                     channel = client.get_channel(RushiCHANNEL_ID)
-                    await channel.send(RushiCommndList[3])
+                    await channel.send(RushiCommndList[3]+fromname)
                 if rp: 
                     channel = client.get_channel(RushiCHANNEL_ID)
-                    await channel.send(RushiCommndList[4])
+                    await channel.send(RushiCommndList[4]+fromname)
 #ループ処理
 time_check.start()
 # Botの起動とDiscordサーバーへの接続
