@@ -54,6 +54,7 @@ async def on_message(message):
         x = message.content
         if x.find('!') == 0:
             await message.delete()  
+            await message.channel.send('to'+message.author.name)
             a = re.search(r',.*', x, flags=re.DOTALL)
             #b = re.search(r'@.*', x, flags=re.DOTALL)
             if re.findall('^!', x, flags=re.IGNORECASE):
@@ -201,7 +202,6 @@ async def on_message(message):
                 if rp: 
                     channel = client.get_channel(RushiCHANNEL_ID)
                     await channel.send(RushiCommndList[4])
-    await message.channel.send('from'+message.author.name)
 #ループ処理
 time_check.start()
 # Botの起動とDiscordサーバーへの接続
