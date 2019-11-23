@@ -35,6 +35,7 @@ async def time_check():
 # メッセージ受信時に動作する処理
 @client.event
 async def on_message(message):
+    print (message.author.id)
     if message.author.bot:
         return
     # 使用できるコマンド一覧
