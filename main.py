@@ -43,12 +43,12 @@ async def on_message(message):
     if message.content == '!nowtime':
         now = datetime.now().strftime('%H:%M:%S')
         await message.channel.send(now)
-    if message.content == 'list':
+    if message.content == '!list':
         testcmd = ",".join(allcmdlist)                              # コマンドリスト関連
         testcmd_new = testcmd.replace(',', '\n')                    #
         #allcmdlist_new =  testcmd_new.split(",")                    #
         await message.channel.send(testcmd_new.replace('"', '\n'))  #
-    if message.content == 'mlist':
+    if message.content == '!mlist':
         await message.channel.send('\n'+mlist[0]+'\n'+mlist[1]+'\n'+mlist[2]+'\n'+mlist[3])
     if message.content != None:
         x = message.content
