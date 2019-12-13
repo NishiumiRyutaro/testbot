@@ -38,6 +38,11 @@ async def on_message(message):
     if message.author.bot:
         return
     # 使用できるコマンド一覧
+    if message.content == '!join':   
+        role = discord.utils.get(message.guild.roles, name='test')
+        await message.author.add_roles(role)
+        reply = f'{message.author.mention} ようこそ！'
+        await message.channel.send(reply)
     if message.content == '!specification':
         await message.channel.send('normal')
     if message.content == '!nowtime':
