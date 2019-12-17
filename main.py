@@ -12,6 +12,8 @@ from foo import MarisuCommndList
 from foo import mlist
 from foo import MarisuMyMCommndList
 from foo import MarisuMyECommndList
+from foo import RMarisuCommndList
+
 
 token = os.getenv('DISCORD_TOKEN')
 #channel_id = 644583189331050537
@@ -73,6 +75,15 @@ async def on_message(message):
                 mn = re.search(r'tm2130', x, flags=re.DOTALL)
                 mo = re.search(r'tm2200', x, flags=re.DOTALL)
                 mp = re.search(r'tm2230', x, flags=re.DOTALL)
+                rvmo = re.search(r'rm2030', x, flags=re.DOTALL)
+                rvmt = re.search(r'rm2100', x, flags=re.DOTALL)
+                rvmth = re.search(r'rm2130', x, flags=re.DOTALL)
+                rvmf = re.search(r'rm2200', x, flags=re.DOTALL)
+                rvmfi = re.search(r'rm2230', x, flags=re.DOTALL)
+                rvms = re.search(r'rm2300', x, flags=re.DOTALL)
+                rvmse = re.search(r'rm2330', x, flags=re.DOTALL)
+                rvme = re.search(r'rm2400', x, flags=re.DOTALL)
+                rvmni = re.search(r'rm2430', x, flags=re.DOTALL)
                 am = re.search(r'ab2030', x, flags=re.DOTALL)
                 al = re.search(r'ab2100', x, flags=re.DOTALL)
                 an = re.search(r'ab2130', x, flags=re.DOTALL)
@@ -124,6 +135,33 @@ async def on_message(message):
                         if mp:
                             channel = client.get_channel(MarisuCHANNEL_ID)
                             await channel.send(a+'日'+MarisuCommndList[4]+fromname)
+                        if rvmo:
+                            channel = client.get_channel(MarisuCHANNEL_ID)
+                            await channel.send(a+'日'+RMarisuCommndList[0]+fromname)
+                        if rvmt:
+                            channel = client.get_channel(MarisuCHANNEL_ID)
+                            await channel.send(a+'日'+RMarisuCommndList[1]+fromname)
+                        if rvmth:
+                            channel = client.get_channel(MarisuCHANNEL_ID)
+                            await channel.send(a+'日'+RMarisuCommndList[2]+fromname)
+                        if rvmf:
+                            channel = client.get_channel(MarisuCHANNEL_ID)
+                            await channel.send(a+'日'+RMarisuCommndList[3]+fromname)
+                        if rvmfi:
+                            channel = client.get_channel(MarisuCHANNEL_ID)
+                            await channel.send(a+'日'+RMarisuCommndList[4]+fromname)
+                        if rvms:
+                            channel = client.get_channel(MarisuCHANNEL_ID)
+                            await channel.send(a+'日'+RMarisuCommndList[5]+fromname)
+                        if rvmse:
+                            channel = client.get_channel(MarisuCHANNEL_ID)
+                            await channel.send(a+'日'+RMarisuCommndList[6]+fromname)
+                        if rvme:
+                            channel = client.get_channel(MarisuCHANNEL_ID)
+                            await channel.send(a+'日'+RMarisuCommndList[7]+fromname)
+                        if rvmni:
+                            channel = client.get_channel(MarisuCHANNEL_ID)
+                            await channel.send(a+'日'+RMarisuCommndList[8]+fromname)
                         if am:
                             channel = client.get_channel(AruCHANNEL_ID)
                             await channel.send(a+'日'+AruCommndList[0]+fromname)
@@ -185,6 +223,33 @@ async def on_message(message):
                 if mp:
                     channel = client.get_channel(MarisuCHANNEL_ID)
                     await channel.send(MarisuCommndList[4]+fromname)
+                if rvmo:
+                    channel = client.get_channel(MarisuCHANNEL_ID)
+                    await channel.send(RMarisuCommndList[0]+fromname)
+                if rvmt:
+                    channel = client.get_channel(MarisuCHANNEL_ID)
+                    await channel.send(RMarisuCommndList[1]+fromname)
+                if rvmth:
+                    channel = client.get_channel(MarisuCHANNEL_ID)
+                    await channel.send(RMarisuCommndList[2]+fromname)
+                if rvmf:
+                    channel = client.get_channel(MarisuCHANNEL_ID)
+                    await channel.send(RMarisuCommndList[3]+fromname)
+                if rvmfi:
+                    channel = client.get_channel(MarisuCHANNEL_ID)
+                    await channel.send(RMarisuCommndList[4]+fromname)
+                if rvms:
+                    channel = client.get_channel(MarisuCHANNEL_ID)
+                    await channel.send(RMarisuCommndList[5]+fromname)
+                if rvmse:
+                    channel = client.get_channel(MarisuCHANNEL_ID)
+                    await channel.send(RMarisuCommndList[6]+fromname)
+                if rvme:
+                    channel = client.get_channel(MarisuCHANNEL_ID)
+                    await channel.send(RMarisuCommndList[7]+fromname)
+                if rvmni:
+                    channel = client.get_channel(MarisuCHANNEL_ID)
+                    await channel.send(RMarisuCommndList[8]+fromname)
                 if am:
                     channel = client.get_channel(AruCHANNEL_ID)
                     await channel.send(AruCommndList[0]+fromname)
