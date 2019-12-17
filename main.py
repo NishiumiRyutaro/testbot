@@ -13,6 +13,8 @@ from foo import mlist
 from foo import MarisuMyMCommndList
 from foo import MarisuMyECommndList
 from foo import RMarisuCommndList
+from foo import GrandCommndList
+
 
 
 token = os.getenv('DISCORD_TOKEN')
@@ -21,6 +23,7 @@ TsuyoCHANNEL_ID = 627287563190665217 #チャンネルID
 RushiCHANNEL_ID = 627064056771248128 #チャンネルID
 AruCHANNEL_ID = 627064032280444938 #チャンネルID
 MarisuCHANNEL_ID = 627329328333455373 #チャンネルID
+GrandCHANNEL_ID = 644577870764703765 #チャンネルID
 
 
 # 接続に必要なオブジェクトを生成
@@ -85,6 +88,15 @@ async def on_message(message):
                 rvmse = re.search(r'rm2330', x, flags=re.DOTALL)
                 rvme = re.search(r'rm2400', x, flags=re.DOTALL)
                 rvmni = re.search(r'rm2430', x, flags=re.DOTALL)
+                gro = re.search(r'gr2030', x, flags=re.DOTALL)
+                grt = re.search(r'gr2100', x, flags=re.DOTALL)
+                grth = re.search(r'gr2130', x, flags=re.DOTALL)
+                grf = re.search(r'gr2200', x, flags=re.DOTALL)
+                grfi = re.search(r'gr2230', x, flags=re.DOTALL)
+                grs = re.search(r'gr2300', x, flags=re.DOTALL)
+                grse = re.search(r'gr2330', x, flags=re.DOTALL)
+                gre = re.search(r'gr2400', x, flags=re.DOTALL)
+                grni = re.search(r'gr2430', x, flags=re.DOTALL)
                 am = re.search(r'ab2030', x, flags=re.DOTALL)
                 al = re.search(r'ab2100', x, flags=re.DOTALL)
                 an = re.search(r'ab2130', x, flags=re.DOTALL)
@@ -163,6 +175,33 @@ async def on_message(message):
                         if rvmni:
                             channel = client.get_channel(MarisuCHANNEL_ID)
                             await channel.send(a+'日'+RMarisuCommndList[8]+fromname)
+                        if gro:
+                            channel = client.get_channel(GrandCHANNEL_ID)
+                            await channel.send(a+'日'+GrandCommndList[0]+fromname)
+                        if grt:
+                            channel = client.get_channel(GrandCHANNEL_ID)
+                            await channel.send(a+'日'+GrandCommndList[1]+fromname)
+                        if grth:
+                            channel = client.get_channel(GrandCHANNEL_ID)
+                            await channel.send(a+'日'+GrandCommndList[2]+fromname)
+                        if grf:
+                            channel = client.get_channel(GrandCHANNEL_ID)
+                            await channel.send(a+'日'+GrandCommndList[3]+fromname)
+                        if grfi:
+                            channel = client.get_channel(GrandCHANNEL_ID)
+                            await channel.send(a+'日'+GrandCommndList[4]+fromname)
+                        if grs:
+                            channel = client.get_channel(GrandCHANNEL_ID)
+                            await channel.send(a+'日'+GrandCommndList[5]+fromname)
+                        if grse:
+                            channel = client.get_channel(GrandCHANNEL_ID)
+                            await channel.send(a+'日'+GrandCommndList[6]+fromname)
+                        if gre:
+                            channel = client.get_channel(GrandCHANNEL_ID)
+                            await channel.send(a+'日'+GrandCommndList[7]+fromname)
+                        if grni:
+                            channel = client.get_channel(GrandCHANNEL_ID)
+                            await channel.send(a+'日'+GrandCommndList[8]+fromname)
                         if am:
                             channel = client.get_channel(AruCHANNEL_ID)
                             await channel.send(a+'日'+AruCommndList[0]+fromname)
@@ -251,6 +290,33 @@ async def on_message(message):
                 if rvmni:
                     channel = client.get_channel(MarisuCHANNEL_ID)
                     await channel.send(RMarisuCommndList[8]+fromname)
+                if gro:
+                    channel = client.get_channel(GrandCHANNEL_ID)
+                    await channel.send(GrandCommndList[0]+fromname)
+                if grt:
+                    channel = client.get_channel(GrandCHANNEL_ID)
+                    await channel.send(GrandCommndList[1]+fromname)
+                if grth:
+                    channel = client.get_channel(GrandCHANNEL_ID)
+                    await channel.send(GrandCommndList[2]+fromname)
+                if grf:
+                    channel = client.get_channel(GrandCHANNEL_ID)
+                    await channel.send(GrandCommndList[3]+fromname)
+                if grfi:
+                    channel = client.get_channel(GrandCHANNEL_ID)
+                    await channel.send(GrandCommndList[4]+fromname)
+                if grs:
+                    channel = client.get_channel(GrandCHANNEL_ID)
+                    await channel.send(GrandCommndList[5]+fromname)
+                if grse:
+                    channel = client.get_channel(GrandCHANNEL_ID)
+                    await channel.send(GrandCommndList[6]+fromname)
+                if gre:
+                    channel = client.get_channel(GrandCHANNEL_ID)
+                    await channel.send(GrandCommndList[7]+fromname)
+                if grni:
+                    channel = client.get_channel(GrandCHANNEL_ID)
+                    await channel.send(GrandCommndList[8]+fromname)
                 if am:
                     channel = client.get_channel(AruCHANNEL_ID)
                     await channel.send(AruCommndList[0]+fromname)
