@@ -20,7 +20,8 @@ token = os.getenv('DISCORD_TOKEN')
 TsuyoCHANNEL_ID = 627287563190665217 #チャンネルID
 RushiCHANNEL_ID = 627064056771248128 #チャンネルID
 AruCHANNEL_ID = 627064032280444938 #チャンネルID
-MarisuCHANNEL_ID = 627329328333455373 #チャンネルID
+MarisuCHANNEL_ID = 644577870764703765 #チャンネルID
+
 
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
