@@ -65,7 +65,7 @@ async def on_message(message):
         x = message.content
         if x.find('!') == 0:
             await message.delete()  
-            fromname = ('from'+message.author.name)
+            fromname = ('from'+' '+message.author.name)
             a = re.search(r',.*', x)
             #b = re.search(r'@.*', x, flags=re.DOTALL)
             if re.findall('^!', x, flags=re.IGNORECASE):
