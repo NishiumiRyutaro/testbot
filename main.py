@@ -63,6 +63,7 @@ async def on_message(message):
         await message.channel.send('\n'+mlist[0]+'\n'+mlist[1]+'\n'+mlist[2]+'\n'+mlist[3])
     if message.content != None:
         x = message.content
+        print(x)
         if x.find('!') == 0:
             await message.delete()  
             fromname = ('from'+' '+message.author.name)
