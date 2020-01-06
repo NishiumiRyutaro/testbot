@@ -41,8 +41,7 @@ async def time_check():
 # メッセージ受信時に動作する処理
 @client.event
 async def on_message(message):
-    fromname = ('from'+' '+message.author.name)
-    print('[' + message.author.name + ']' + x)
+    print('[' + message.author.name + ']' + message.content)
     if message.author.bot:
         return
     # 使用できるコマンド一覧
@@ -66,7 +65,8 @@ async def on_message(message):
     if message.content != None:
         x = message.content
         if x.find('!') == 0:
-            await message.delete() 
+            await message.delete()
+            fromname = ('from'+' '+message.author.name)
             a = re.search(r',.*', x)
             #b = re.search(r'@.*', x, flags=re.DOTALL)
             if re.findall('^!', x, flags=re.IGNORECASE):
