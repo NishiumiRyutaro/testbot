@@ -14,6 +14,9 @@ from foo import MarisuMyMCommndList
 from foo import MarisuMyECommndList
 from foo import RMarisuCommndList
 from foo import GrandCommndList
+from foo import AlldateTimeList
+from foo import FOdateTimeList
+from foo import readydateTimeList
 
 
 
@@ -32,11 +35,33 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('ready')
+
+async def AllSendMessage():
+    channel = client.get_channel(channel_id)
+    await channel.send('攻撃アビ発動5分前です')
+    await channel.send('防衛アビ発動5分前です')
+    await channel.send('副団アビ発動5分前です。次の副団アビは23時です。')
+    await asyncio.sleep(35)    
+async def FOSendMessage():
+    channel = client.get_channel(channel_id)
+    await channel.send('副団アビ発動5分前です')
+    await asyncio.sleep(35)
+async def readySendMessage():
+    channel = client.get_channel(channel_id)
+    await channel.send('古戦場だよ')
+    await asyncio.sleep(35)
+    
 # 30秒に一回ループ
 @tasks.loop(seconds=0)
 async def time_check():
     # 現在の時刻
     now = datetime.now().strftime('%H:%M:%S')
+    if now in AlldateTimeList:
+        await AllSendMessage()
+    if now in FOdateTimeList:
+        await FOSendMessage()
+    if now in readydateTimeList:
+        await readySendMessage()     
     
 # メッセージ受信時に動作する処理
 @client.event
