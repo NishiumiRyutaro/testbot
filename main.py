@@ -55,8 +55,13 @@ async def readySendMessage():
 @tasks.loop(seconds=0)
 async def time_check():
     # 現在の時刻
-    now = datetime.now().strftime('%H:%M:%S')     
-    
+    now = datetime.now().strftime('%H:%M:%S')
+    if now in AlldateTimeList:
+        await AllSendMessage()
+    if now in FOdateTimeList:
+        await FOSendMessage()
+    if now in readydateTimeList:
+        await readySendMessage()   
 # メッセージ受信時に動作する処理
 @client.event
 async def on_message(message):
