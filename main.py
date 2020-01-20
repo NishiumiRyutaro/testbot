@@ -75,7 +75,7 @@ async def on_message(message):
         reply = f'{message.author.mention} ようこそ！'
         await message.channel.send(reply)
     if message.content == '!specification':
-        await message.channel.send('normal')
+        await message.channel.send('')
     if message.content == '!nowtime':
         now = datetime.now().strftime('%H:%M:%S')
         await message.channel.send(now)
