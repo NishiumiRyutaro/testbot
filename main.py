@@ -40,7 +40,7 @@ async def AllSendMessage():
     channel = client.get_channel(channel_id)
     await channel.send('攻撃アビ発動5分前です')
     await channel.send('防衛アビ発動5分前です')
-    await channel.send('副団アビ発動5分前です。次の副団アビは23時です。')
+    await channel.send('副団アビ発動5分前です。次の副団アビは22時です。')
     await asyncio.sleep(35)    
 async def FOSendMessage():
     channel = client.get_channel(channel_id)
