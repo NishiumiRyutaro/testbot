@@ -122,7 +122,7 @@ AlldateTimeList = [
  '19:55:00'
 ]
 FOdateTimeList = [
- '22:55:00'
+ '21:55:00'
  ]
 readydateTimeList = [
  '06:55:00'
