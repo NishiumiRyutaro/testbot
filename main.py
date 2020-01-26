@@ -16,7 +16,7 @@ from foo import RMarisuCommndList
 from foo import GrandCommndList
 from foo import AlldateTimeList
 from foo import FOdateTimeList
-from foo import readydateTimeList
+
 
 
 
@@ -60,8 +60,7 @@ async def time_check():
         await AllSendMessage()
     if now in FOdateTimeList:
         await FOSendMessage()
-    if now in readydateTimeList:
-        await readySendMessage()   
+
 # メッセージ受信時に動作する処理
 @client.event
 async def on_message(message):
