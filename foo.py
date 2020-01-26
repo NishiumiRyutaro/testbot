@@ -124,6 +124,4 @@ AlldateTimeList = [
 FOdateTimeList = [
  '21:55:00'
  ]
-readydateTimeList = [
- '06:55:00'
- ]
+
