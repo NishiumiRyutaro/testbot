@@ -14,14 +14,9 @@ from foo import MarisuMyMCommndList
 from foo import MarisuMyECommndList
 from foo import RMarisuCommndList
 from foo import GrandCommndList
-from foo import AlldateTimeList
-from foo import FOdateTimeList
-
-
-
 
 token = os.getenv('DISCORD_TOKEN')
-channel_id = 644583189331050537
+#channel_id = 644583189331050537
 TsuyoCHANNEL_ID = 627287563190665217 #チャンネルID
 RushiCHANNEL_ID = 627064056771248128 #チャンネルID
 AruCHANNEL_ID = 627064032280444938 #チャンネルID
@@ -41,10 +36,7 @@ async def on_ready():
 async def time_check():
     # 現在の時刻
     now = datetime.now().strftime('%H:%M:%S')
-    if now in AlldateTimeList:
-        await AllSendMessage()
-    if now in FOdateTimeList:
-        await FOSendMessage()
+
 
 # メッセージ受信時に動作する処理
 @client.event
