@@ -35,21 +35,6 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('ready')
-
-async def AllSendMessage():
-    channel = client.get_channel(channel_id)
-    await channel.send('攻撃アビ発動5分前です')
-    await channel.send('防衛アビ発動5分前です')
-    await channel.send('副団アビ発動5分前です。次の副団アビは22時です。')
-    await asyncio.sleep(35)    
-async def FOSendMessage():
-    channel = client.get_channel(channel_id)
-    await channel.send('副団アビ発動5分前です')
-    await asyncio.sleep(35)
-async def readySendMessage():
-    channel = client.get_channel(channel_id)
-    await channel.send('古戦場だよ')
-    await asyncio.sleep(35)
     
 # 30秒に一回ループ
 @tasks.loop(seconds=0)
