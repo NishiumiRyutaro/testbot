@@ -44,5 +44,5 @@ async def on_message(message):
       imgname = ('output.png')
       #await message.channel.send(pdf_name,'output.png'))
       await message.channel.send(file=discord.File(imgname))
-client.run(TOKEN)
+client.run(token)
 
