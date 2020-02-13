@@ -8,7 +8,6 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 client = discord.Client()
 
-
 ###################################
 # 定義
 ###################################
@@ -42,7 +41,8 @@ async def on_message(message):
       image[0].save('output.png', 'png')
 
       #変換した画像ファイル送信
-      await message.channel.send(pdf_name,'output.png')
-
+      imgname = ('output.png')
+      #await message.channel.send(pdf_name,'output.png'))
+      await message.channel.send(file=discord.File(imgname))
 client.run(TOKEN)
 
