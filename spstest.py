@@ -42,7 +42,7 @@ async def on_message(message):
       image[0].save('output.png', 'png')
 
       #変換した画像ファイル送信
-      await message.channel.send('output.png')
+      await message.channel.send(pdf_name,'output.png')
 
 client.run(TOKEN)
 
