@@ -32,7 +32,7 @@ async def on_message(message):
     # get_imageでスプレッドシートの画像取得実行
     if "get_image" in message.content:
       #pdf取得
-      pdf_export_url = spreadsheet_url + "/export?format=pdf&gid=<シートのGID>&range=A1:D14&portrait=false&size=8&fitw=true&vertical_alignment=top&horizontal_alignment=CENTER&scale=3"
+      pdf_export_url = spreadsheet_url + "/export?format=pdf&gid=2122610144&range=A1:D14&portrait=false&size=8&fitw=true&vertical_alignment=top&horizontal_alignment=CENTER&scale=3"
       pdf_name = "output.pdf"
       urllib.request.urlretrieve(pdf_export_url, pdf_name)
 
