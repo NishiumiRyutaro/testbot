@@ -43,4 +43,4 @@ async def on_message(message):
       #変換した画像ファイル送信
       await client.send_file(message.channel, 'output.png')
 
-client.run(TOKEN)
+client.run(token)
