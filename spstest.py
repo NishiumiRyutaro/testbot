@@ -8,6 +8,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 client = discord.Client()
 
+
 ###################################
 # 定義
 ###################################
@@ -32,7 +33,7 @@ async def on_message(message):
     # get_imageでスプレッドシートの画像取得実行
     if "get_image" in message.content:
       #pdf取得
-      pdf_export_url = spreadsheet_url + "/export?format=pdf&gid=2122610144&range=A1:D14&portrait=false&size=8&fitw=true&vertical_alignment=top&horizontal_alignment=CENTER&scale=3"
+      pdf_export_url = 'https://docs.google.com/spreadsheets/d/' + '1qBNUJ1hkDg2N5v26ml5NAIua8HOZhxlO2PBlCeJVZIM' + '/export?format=pdf&gid='+'2122610144'
       pdf_name = "output.pdf"
       urllib.request.urlretrieve(pdf_export_url, pdf_name)
 
@@ -41,6 +42,7 @@ async def on_message(message):
       image[0].save('output.png', 'png')
 
       #変換した画像ファイル送信
-      await client.send_file(message.channel, 'output.png')
+      await message.channel.send('output.png')
 
-client.run(token)
+client.run(TOKEN)
+
