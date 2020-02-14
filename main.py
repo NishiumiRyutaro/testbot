@@ -43,7 +43,8 @@ async def time_check():
 async def on_message(message):
     print('[' + message.author.name + ']' + message.content)
     if message.author.bot:
-        return
+       if message.find('!') == 0:
+       await message.delete()
     # 使用できるコマンド一覧
     if message.content == '!join':   
         role = discord.utils.get(message.guild.roles, name='test')
