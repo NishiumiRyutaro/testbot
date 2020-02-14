@@ -43,7 +43,6 @@ async def on_message(message):
            #変換した画像ファイル送信
            imgname = ('output.png')
            #await message.channel.send(pdf_name,'output.png'))
-           await message.channel.send(file=discord.File(imgname))
            await message.channel.send('プログラムは動作しています'))  
 client.run(token)
 
