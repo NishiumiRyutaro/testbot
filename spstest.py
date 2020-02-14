@@ -16,6 +16,7 @@ spreadsheet_url = "https://docs.google.com/spreadsheets/d/1qBNUJ1hkDg2N5v26ml5NA
 
 #2つのAPIを記述しないとリフレッシュトークンを3600秒毎に発行し続けなければならない
 scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
+
 #認証情報設定（ファイルはgoogleの認証情報をリネーム）
 credentials = ServiceAccountCredentials.from_json_keyfile_name('./testprogram-268103-c5de3b903380.json', scope)
 
@@ -34,10 +35,14 @@ async def on_message(message):
       pdf_export_url = 'https://docs.google.com/spreadsheets/d/' + '1qBNUJ1hkDg2N5v26ml5NAIua8HOZhxlO2PBlCeJVZIM' + '/export?format=pdf&gid='+'2122610144'
       pdf_name = "output.pdf"
       urllib.request.urlretrieve(pdf_export_url, pdf_name)
+
       #画像変換
       image = convert_from_path(pdf_name)
       image[0].save('output.png', 'png')
+
       #変換した画像ファイル送信
       imgname = ('output.png')
+      #await message.channel.send(pdf_name,'output.png'))
       await message.channel.send(file=discord.File(imgname))
-client.run(TOKEN)
+client.run(token)
+
