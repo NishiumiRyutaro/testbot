@@ -29,7 +29,7 @@ gc = gspread.authorize(credentials)
 @client.event
 async def on_message(message):
     # get_imageでスプレッドシートの画像取得実行
-  if "get_image" in message.content:
+  if "!get_image" in message.content:
       #pdf取得
       pdf_export_url = 'https://docs.google.com/spreadsheets/d/' + '1qBNUJ1hkDg2N5v26ml5NAIua8HOZhxlO2PBlCeJVZIM' + '/export?format=pdf&gid='+'2122610144'
       pdf_name = "output.pdf"
