@@ -28,21 +28,22 @@ gc = gspread.authorize(credentials)
 ###################################
 @client.event
 async def on_message(message):
+    if message.author != client.user:
     # get_imageでスプレッドシートの画像取得実行
-  if "!get_image" in message.content:
-      #pdf取得
-      pdf_export_url = 'https://docs.google.com/spreadsheets/d/' + '1qBNUJ1hkDg2N5v26ml5NAIua8HOZhxlO2PBlCeJVZIM' + '/export?format=pdf&gid='+'2122610144'
-      pdf_name = "output.pdf"
-      urllib.request.urlretrieve(pdf_export_url, pdf_name)
-
-      #画像変換
-      image = convert_from_path(pdf_name)
-      image[0].save('output.png', 'png')
-
-      #変換した画像ファイル送信
-      imgname = ('output.png')
-      #await message.channel.send(pdf_name,'output.png'))
-      await message.channel.send(file=discord.File(imgname))
-      await message.channel.send('プログラムは動作しています'))  
+        if "!get_image" in message.content:
+           #pdf取得
+           pdf_export_url = 'https://docs.google.com/spreadsheets/d/' + '1qBNUJ1hkDg2N5v26ml5NAIua8HOZhxlO2PBlCeJVZIM' + '/export?format=pdf&gid='+'2122610144'
+           pdf_name = "output.pdf"
+           urllib.request.urlretrieve(pdf_export_url, pdf_name)
+        
+           #画像変換
+           image = convert_from_path(pdf_name)
+           image[0].save('output.png', 'png')
+        
+           #変換した画像ファイル送信
+           imgname = ('output.png')
+           #await message.channel.send(pdf_name,'output.png'))
+           await message.channel.send(file=discord.File(imgname))
+           await message.channel.send('プログラムは動作しています'))  
 client.run(token)
 
