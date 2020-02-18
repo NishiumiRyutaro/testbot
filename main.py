@@ -14,9 +14,12 @@ from foo import MarisuMyMCommndList
 from foo import MarisuMyECommndList
 from foo import RMarisuCommndList
 from foo import GrandCommndList
+from foo import AlldateTimeList
+from foo import FOdateTimeList
+from foo import readydateTimeList
 
 token = os.getenv('DISCORD_TOKEN')
-#channel_id = 644583189331050537
+channel_id = 644583189331050537
 TsuyoCHANNEL_ID = 627287563190665217 #チャンネルID
 RushiCHANNEL_ID = 627064056771248128 #チャンネルID
 AruCHANNEL_ID = 627064032280444938 #チャンネルID
@@ -30,6 +33,20 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print('ready')
+
+async def AllSendMessage():
+    channel = client.get_channel(channel_id)
+    await channel.send('攻撃アビ発動5分前です')
+    await channel.send('防衛アビ発動5分前です')
+    await asyncio.sleep(35)    
+async def FOSendMessage():
+    channel = client.get_channel(channel_id)
+    await channel.send('副団アビ発動5分前です')
+    await asyncio.sleep(35)
+async def readySendMessage():
+    channel = client.get_channel(channel_id)
+    await channel.send('古戦場だよ')
+    await asyncio.sleep(35)
     
 # 30秒に一回ループ
 @tasks.loop(seconds=0)
