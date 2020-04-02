@@ -35,7 +35,7 @@ async def on_message(message):
       pdf_export_url = 'https://docs.google.com/spreadsheets/d/' + '1qBNUJ1hkDg2N5v26ml5NAIua8HOZhxlO2PBlCeJVZIM' + '/export?format=pdf&gid='+'2122610144'
       pdf_name = "output.pdf"
       urllib.request.urlretrieve(pdf_export_url, pdf_name)
-
+      await message.channel.send("hello")
       #画像変換
       image = convert_from_path(pdf_name)
       image[0].save('output.png', 'png')
