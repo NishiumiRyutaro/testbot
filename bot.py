@@ -4,6 +4,7 @@ import tabelog
 
 channel_id = 644386726961217539
 client = discord.Client()
+token = os.getenv('DISCORD_TOKEN')
 
 @client.event
 async def on_ready():
@@ -23,4 +24,4 @@ async def on_message(message):
             await channel.send(lunch)
             
 
-client.run(TOKEN)
+client.run(token)
