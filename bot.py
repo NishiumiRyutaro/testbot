@@ -23,4 +23,4 @@ async def on_message(message):
             await channel.send(lunch)
             
 
-client.run("NjI5Njk3ODExODA5ODI4ODk0.Xct9Zw.8ZhaXrNi2vPD2VK7QP8p7dwL3sU")
+client.run(TOKEN)
