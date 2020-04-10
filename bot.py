@@ -1,3 +1,4 @@
+import os
 import discord
 import random
 import tabelog
@@ -23,5 +24,4 @@ async def on_message(message):
             lunch = tabelog.get_shop_list(words[1], words[2])    
             await channel.send(lunch)
             
-
 client.run(token)
