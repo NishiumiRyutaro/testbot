@@ -19,7 +19,7 @@ from foo import FOdateTimeList
 from foo import readydateTimeList
 
 token = os.getenv('DISCORD_TOKEN')
-channel_id = 777486663483654164
+channel_id = 777487093999992852
 TsuyoCHANNEL_ID = 627287563190665217 #チャンネルID
 RushiCHANNEL_ID = 627064056771248128 #チャンネルID
 AruCHANNEL_ID = 627064032280444938 #チャンネルID
