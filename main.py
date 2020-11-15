@@ -36,8 +36,8 @@ async def on_ready():
 
 async def AllSendMessage():
     channel = client.get_channel(channel_id)
-    await channel.send('攻撃アビ発動5分前です')
-    await channel.send('防衛アビ発動5分前です')
+    await channel.send('@きちと攻撃アビ発動です')
+    await channel.send('@きちと防衛アビ発動です')
     await asyncio.sleep(35)    
 async def FOSendMessage():
     channel = client.get_channel(channel_id)
